@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "c382bb28b99ba91d33f5510b3454577f"
+build_time: [511806611, 441338000]
+inputs:
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session2/MultipleThreadsSample/MultipleThreadsSample/AppDelegate.swift": [511798991, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session2/MultipleThreadsSample/MultipleThreadsSample/CollectionViewController.swift": [511806611, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session2/MultipleThreadsSample/MultipleThreadsSample/ViewController.swift": [511799464, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session2/MultipleThreadsSample/MultipleThreadsSample/TableViewController.swift": [511799695, 0]
