@@ -87,7 +87,7 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
-@import Dispatch;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -133,9 +133,23 @@ SWIFT_CLASS("_TtC21MultipleThreadsSample24CollectionViewController")
 - (NSInteger)collectionView:(UICollectionView * __nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell * __nonnull)collectionView:(UICollectionView * __nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)downloadImage:(void (^ __nonnull)(UIImage * __nonnull))image;
-@property (nonatomic, readonly, strong) dispatch_queue_t __null_unspecified serialQueue;
-@property (nonatomic, readonly, strong) dispatch_group_t __null_unspecified group;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * __nonnull)layout OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSOperationQueue;
+@class UIScrollView;
+
+SWIFT_CLASS("_TtC21MultipleThreadsSample23OperationViewController")
+@interface OperationViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIScrollView * __null_unspecified scrollView;
+@property (nonatomic) CGFloat yPosition;
+@property (nonatomic) CGFloat imageCount;
+@property (nonatomic, readonly, strong) NSOperationQueue * __nonnull queue;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)startDownloadButtonTouchDown:(id __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

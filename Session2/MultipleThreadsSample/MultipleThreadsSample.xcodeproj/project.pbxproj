@@ -17,6 +17,7 @@
 		726950E81C9EE9CF00CB8BA9 /* MultipleThreadsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726950E71C9EE9CF00CB8BA9 /* MultipleThreadsSampleUITests.swift */; };
 		726950F61C9EEBA700CB8BA9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726950F51C9EEBA700CB8BA9 /* TableViewController.swift */; };
 		726950F81C9EED0100CB8BA9 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726950F71C9EED0100CB8BA9 /* CollectionViewController.swift */; };
+		72FBF4B11C9FA52D00570D62 /* OperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FBF4B01C9FA52D00570D62 /* OperationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		726950E91C9EE9CF00CB8BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726950F51C9EEBA700CB8BA9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		726950F71C9EED0100CB8BA9 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		72FBF4B01C9FA52D00570D62 /* OperationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				726950D31C9EE9CF00CB8BA9 /* Info.plist */,
 				726950CB1C9EE9CF00CB8BA9 /* MultipleThreadsSample.xcdatamodeld */,
 				726950F71C9EED0100CB8BA9 /* CollectionViewController.swift */,
+				72FBF4B01C9FA52D00570D62 /* OperationViewController.swift */,
 			);
 			path = MultipleThreadsSample;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				726950CD1C9EE9CF00CB8BA9 /* MultipleThreadsSample.xcdatamodeld in Sources */,
 				726950C71C9EE9CF00CB8BA9 /* ViewController.swift in Sources */,
+				72FBF4B11C9FA52D00570D62 /* OperationViewController.swift in Sources */,
 				726950C51C9EE9CF00CB8BA9 /* AppDelegate.swift in Sources */,
 				726950F61C9EEBA700CB8BA9 /* TableViewController.swift in Sources */,
 				726950F81C9EED0100CB8BA9 /* CollectionViewController.swift in Sources */,
@@ -494,6 +498,7 @@
 				726950EE1C9EE9CF00CB8BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		726950EF1C9EE9CF00CB8BA9 /* Build configuration list for PBXNativeTarget "MultipleThreadsSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				726950F11C9EE9CF00CB8BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		726950F21C9EE9CF00CB8BA9 /* Build configuration list for PBXNativeTarget "MultipleThreadsSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				726950F41C9EE9CF00CB8BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
