@@ -1,0 +1,112 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Music"
+provides-nominal:
+- "C16itunesHttpSample5Music"
+provides-member:
+- ["C16itunesHttpSample5Music", ""]
+provides-dynamic-lookup:
+- "previewUrl"
+- "artistName"
+- "trackCensoredName"
+- "artworkUrl"
+- "collectionCensoredName"
+depends-top-level:
+- "Music"
+- "NSManagedObject"
+- "String"
+- "NSData"
+depends-member:
+- ["PSs9AnyObject", "artistName"]
+- ["PSs9AnyObject", "artworkUrl"]
+- ["PSs9AnyObject", "collectionCensoredName"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "previewUrl"]
+- ["PSs9AnyObject", "trackCensoredName"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "artistName"]
+- ["PSs11CVarArgType", "artworkUrl"]
+- ["PSs11CVarArgType", "collectionCensoredName"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "previewUrl"]
+- ["PSs11CVarArgType", "trackCensoredName"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "artistName"]
+- ["PSs23CustomStringConvertible", "artworkUrl"]
+- ["PSs23CustomStringConvertible", "collectionCensoredName"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "previewUrl"]
+- ["PSs23CustomStringConvertible", "trackCensoredName"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "artistName"]
+- ["PSs9Equatable", "artworkUrl"]
+- ["PSs9Equatable", "collectionCensoredName"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "previewUrl"]
+- ["PSs9Equatable", "trackCensoredName"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "artistName"]
+- ["PSs8Hashable", "artworkUrl"]
+- ["PSs8Hashable", "collectionCensoredName"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "previewUrl"]
+- ["PSs8Hashable", "trackCensoredName"]
+- ["PSs8Hashable", ""]
+- ["C16itunesHttpSample5Music", "NSData"]
+- ["C16itunesHttpSample5Music", "String"]
+- ["C16itunesHttpSample5Music", "artistName"]
+- ["C16itunesHttpSample5Music", "artworkUrl"]
+- ["C16itunesHttpSample5Music", "collectionCensoredName"]
+- ["C16itunesHttpSample5Music", "deinit"]
+- ["C16itunesHttpSample5Music", "init"]
+- ["C16itunesHttpSample5Music", "previewUrl"]
+- ["C16itunesHttpSample5Music", "trackCensoredName"]
+- ["CSo15NSManagedObject", "NSData"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "artistName"]
+- ["CSo15NSManagedObject", "artworkUrl"]
+- ["CSo15NSManagedObject", "collectionCensoredName"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "previewUrl"]
+- ["CSo15NSManagedObject", "trackCensoredName"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "NSData"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "artistName"]
+- ["CSo8NSObject", "artworkUrl"]
+- ["CSo8NSObject", "collectionCensoredName"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "previewUrl"]
+- ["CSo8NSObject", "trackCensoredName"]
+- ["PSo16NSObjectProtocol", "artistName"]
+- ["PSo16NSObjectProtocol", "artworkUrl"]
+- ["PSo16NSObjectProtocol", "collectionCensoredName"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "previewUrl"]
+- ["PSo16NSObjectProtocol", "trackCensoredName"]
+- ["PSo16NSObjectProtocol", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "C16itunesHttpSample5Music"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+interface-hash: "fff52ec2aa98ed4fd7decb5d231e890f"

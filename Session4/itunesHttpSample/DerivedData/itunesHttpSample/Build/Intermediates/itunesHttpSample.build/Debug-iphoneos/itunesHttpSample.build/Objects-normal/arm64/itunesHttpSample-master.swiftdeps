@@ -1,0 +1,11 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "1a86175e0d8965eae34cb1eae5ac758a"
+build_time: [512033804, 138769000]
+inputs:
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/MasterViewController.swift": [512031214, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/DetailViewController.swift": [512033724, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/MusicCell.swift": [512027749, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/Music.swift": [512030409, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/AppDelegate.swift": [512016164, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/SwiftyJSON.swift": [511519811, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session4/itunesHttpSample/itunesHttpSample/iTunesService.swift": [512033455, 0]
