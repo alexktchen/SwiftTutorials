@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C16itunesHttpSample9MusicCell", ""]
 provides-dynamic-lookup:
-- "awakeFromNib"
-- "subtitleLabel"
 - "titleLabel"
-- "setSelected"
+- "awakeFromNib"
 - "musicImageView"
+- "setSelected"
+- "subtitleLabel"
 depends-top-level:
 - "UIImageView"
 - "UILabel"
-- "Bool"
-- "String"
-- "UITableViewCell"
-- "UITableViewCellStyle"
 - "MusicCell"
+- "String"
+- "Bool"
+- "UITableViewCellStyle"
 - "NSCoder"
+- "UITableViewCell"
 depends-member:
 - ["PSs9AnyObject", "awakeFromNib"]
 - ["PSs9AnyObject", "init"]
