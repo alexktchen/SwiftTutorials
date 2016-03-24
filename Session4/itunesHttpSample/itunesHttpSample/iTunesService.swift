@@ -13,16 +13,20 @@ import CoreData
 
 protocol iTunesServiceDeleage {
 
+    func downloadProgress(progress: Float)
+    func didFinishDownloading(url: NSURL)
 }
 
 class iTunesService: NSObject, NSURLSessionDownloadDelegate {
 
-    class var sharedInstance: itunesService {
+    class var sharedInstance: iTunesService {
         struct Singleton {
-            static let instance = itunesService()
+            static let instance = iTunesService()
         }
         return Singleton.instance
     }
+
+    var delegate: iTunesServiceDeleage?
 
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     let serialQueue = dispatch_queue_create("com.Alex.Chen.imagesQueue", DISPATCH_QUEUE_SERIAL)
@@ -68,27 +72,68 @@ class iTunesService: NSObject, NSURLSessionDownloadDelegate {
         dataTask.resume()
     }
 
+    lazy var downloadsSession: NSURLSession = {
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        return session
+    }()
+
+    //method to be called to download
+    func download(url: NSURL) {
+
+        let task = downloadsSession.downloadTaskWithURL(url)
+        task.resume()
+    }
 
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
-        //copy downloaded data to your documents directory with same names as source file
 
+
+        if let originalURL = downloadTask.originalRequest?.URL?.absoluteString,
+            destinationURL = localFilePathForUrl(originalURL) {
+
+                print(destinationURL)
+
+                // 2
+                let fileManager = NSFileManager.defaultManager()
+                do {
+                    try fileManager.removeItemAtURL(destinationURL)
+                } catch {
+                    // Non-fatal: file probably doesn't exist
+                }
+                do {
+                    try fileManager.copyItemAtURL(location, toURL: destinationURL)
+
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.delegate?.didFinishDownloading(destinationURL)
+                    }
+                } catch let error as NSError {
+                    print("Could not copy file to disk: \(error.localizedDescription)")
+                }
+        }
     }
 
     //this is to track progress
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-    }
 
+        dispatch_async(dispatch_get_main_queue()) {
+            self.delegate?.downloadProgress(Float(totalBytesWritten)/Float(totalBytesExpectedToWrite))
+        }
+    }
+    
     // if there is an error during download this will be called
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
 
+
     }
 
-    //method to be called to download
-    func download(url: NSURL) {
-        //download identifier can be customized. I used the "ulr.absoluteString"
-        let sessionConfig = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(url.absoluteString)
-        let session = NSURLSession(configuration: sessionConfig, delegate: self, delegateQueue: nil)
-        let task = session.downloadTaskWithURL(url)
-        task.resume()
+    func localFilePathForUrl(previewUrl: String) -> NSURL? {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        if let url = NSURL(string: previewUrl), lastPathComponent = url.lastPathComponent {
+            let fullPath = documentsPath.stringByAppendingPathComponent(lastPathComponent)
+            return NSURL(fileURLWithPath:fullPath)
+        }
+        return nil
     }
+
+
 }

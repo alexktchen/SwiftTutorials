@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import AVFoundation
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, iTunesServiceDeleage {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
 
+    var previewUrl: String?
 
+     var audioPlayer = AVAudioPlayer()
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -33,6 +38,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        iTunesService.sharedInstance.delegate = self
+        iTunesService.sharedInstance.download(NSURL(string: self.previewUrl!)!)
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        self.audioPlayer.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +51,19 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func downloadProgress(progress: Float) {
 
+        self.progressView.progress = progress
+    }
+
+    func didFinishDownloading(url: NSURL) {
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOfURL: url) //AVAudioPlayer(contentsOfURL: url, error: &error)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch {
+            print(error)
+        }
+    }
 }
 

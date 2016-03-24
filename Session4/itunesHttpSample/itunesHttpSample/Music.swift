@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import CoreData
+
+class Music: NSManagedObject {
+
+
+    @NSManaged var collectionCensoredName: String
+    @NSManaged var previewUrl: String
+    @NSManaged var artworkUrl: NSData
+    @NSManaged var artistName: String
+    @NSManaged var trackCensoredName: String
+
+
+}
