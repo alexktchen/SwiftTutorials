@@ -1,0 +1,7 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "d3f967ad64561934de75152e935d7f75"
+build_time: [511864442, 174555000]
+inputs:
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session3/CoreDataSample/CoreDataSample/ViewController.swift": !dirty [511864442, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session3/CoreDataSample/CoreDataSample/User.swift": !dirty [511864253, 0]
+  "/Users/cktalex/Documents/bProject/SwiftTutorials/Session3/CoreDataSample/CoreDataSample/AppDelegate.swift": !dirty [511863216, 0]
