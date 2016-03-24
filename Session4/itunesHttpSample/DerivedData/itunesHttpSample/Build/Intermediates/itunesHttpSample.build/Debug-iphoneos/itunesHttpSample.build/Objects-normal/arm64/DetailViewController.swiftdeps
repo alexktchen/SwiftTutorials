@@ -6,32 +6,32 @@ provides-nominal:
 provides-member:
 - ["C16itunesHttpSample20DetailViewController", ""]
 provides-dynamic-lookup:
-- "didFinishDownloading"
-- "configureView"
-- "detailDescriptionLabel"
-- "detailItem"
 - "audioPlayer"
 - "viewDidDisappear"
-- "previewUrl"
 - "downloadProgress"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
+- "previewUrl"
+- "configureView"
 - "progressView"
+- "didFinishDownloading"
+- "detailItem"
+- "viewDidLoad"
+- "detailDescriptionLabel"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "StringLiteralType"
-- !private "print"
 - "UIProgressView"
 - "AnyObject"
-- "NSURL"
-- "iTunesServiceDeleage"
-- "Bool"
-- "UIViewController"
-- "Float"
-- !private "iTunesService"
-- "UILabel"
 - "String"
+- "Float"
+- "Bool"
 - "AVAudioPlayer"
+- "UILabel"
+- "NSURL"
+- !private "iTunesService"
 - "DetailViewController"
+- !private "StringLiteralType"
+- "UIViewController"
+- "iTunesServiceDeleage"
+- !private "print"
 depends-member:
 - ["CSo13AVAudioPlayer", "init"]
 - !private ["CSo13AVAudioPlayer", "play"]
@@ -510,8 +510,8 @@ depends-nominal:
 - !private "C16itunesHttpSample13iTunesService"
 - "P16itunesHttpSample20iTunesServiceDeleage"
 depends-dynamic-lookup:
-- !private "description"
 - !private "valueForKey"
+- !private "description"
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"

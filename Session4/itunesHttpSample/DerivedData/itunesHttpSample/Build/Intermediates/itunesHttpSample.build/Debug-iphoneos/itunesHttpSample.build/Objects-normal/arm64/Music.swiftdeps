@@ -6,16 +6,16 @@ provides-nominal:
 provides-member:
 - ["C16itunesHttpSample5Music", ""]
 provides-dynamic-lookup:
-- "previewUrl"
 - "artistName"
 - "trackCensoredName"
 - "artworkUrl"
 - "collectionCensoredName"
+- "previewUrl"
 depends-top-level:
 - "Music"
-- "NSManagedObject"
-- "String"
 - "NSData"
+- "String"
+- "NSManagedObject"
 depends-member:
 - ["PSs9AnyObject", "artistName"]
 - ["PSs9AnyObject", "artworkUrl"]

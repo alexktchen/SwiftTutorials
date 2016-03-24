@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C16itunesHttpSample9MusicCell", ""]
 provides-dynamic-lookup:
+- "musicImageView"
 - "setSelected"
-- "subtitleLabel"
 - "titleLabel"
 - "awakeFromNib"
-- "musicImageView"
+- "subtitleLabel"
 depends-top-level:
-- "UITableViewCell"
-- "UITableViewCellStyle"
-- "Bool"
-- "MusicCell"
-- "UIImageView"
-- "UILabel"
-- "NSCoder"
 - "String"
+- "UITableViewCellStyle"
+- "MusicCell"
+- "UITableViewCell"
+- "NSCoder"
+- "UILabel"
+- "UIImageView"
+- "Bool"
 depends-member:
 - ["PSs9AnyObject", "awakeFromNib"]
 - ["PSs9AnyObject", "init"]
@@ -228,4 +228,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreAudio.swiftmodule"
 interface-hash: "5d968fb7e1649bc3e221fe252d5e1a77"
